@@ -3,6 +3,7 @@
 </script>
 
 <div><textarea bind:value={text} /></div>
+<button>Save</button>
 
 <style>
 	textarea {
