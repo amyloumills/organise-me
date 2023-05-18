@@ -4,6 +4,7 @@
 
 <div><textarea bind:value={text} /></div>
 <button>Save</button>
+<button>Delete</button>
 
 <style>
 	textarea {

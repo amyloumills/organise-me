@@ -1,15 +1,17 @@
-<script>
+<script lang="ts">
+	import { writable } from 'svelte/store';
+
 	import Textbox from '../lib/Textbox.svelte';
 
-	let showTextbox = false;
+	let textboxes = writable<{}[]>([]);
 
-	function handleClick() {
-		showTextbox = true;
+	function addTextbox() {
+		textboxes.update((arr) => [...arr, {}]);
 	}
 </script>
 
-<button on:click={handleClick}>Add a new note</button>
+<button on:click={addTextbox}>Add a new note</button>
 
-{#if showTextbox}
-	<Textbox />
-{/if}
+{#each $textboxes as textbox, i}
+	<Textbox key={i} />
+{/each}
