@@ -1,2 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Textbox from '../lib/Textbox.svelte';
+
+	let textboxValue = '';
+
+	function handleInput(event) {
+		textboxValue = event.detail;
+	}
+</script>
+
+<Textbox bind:value={textboxValue} on:input={handleInput} />
+
+<p>Textbox value: {textboxValue}</p>
