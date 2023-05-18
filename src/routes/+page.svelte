@@ -1,13 +1,15 @@
 <script>
 	import Textbox from '../lib/Textbox.svelte';
 
-	let textboxValue = '';
+	let showTextbox = false;
 
-	function handleInput(event) {
-		textboxValue = event.detail;
+	function handleClick() {
+		showTextbox = true;
 	}
 </script>
 
-<Textbox bind:value={textboxValue} on:input={handleInput} />
+<button on:click={handleClick}>Add a new note</button>
 
-<p>Textbox value: {textboxValue}</p>
+{#if showTextbox}
+	<Textbox />
+{/if}

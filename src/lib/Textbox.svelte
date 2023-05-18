@@ -1,15 +1,12 @@
 <script>
-	import { createEventDispatcher } from 'svelte';
-
-	export let value = '';
-
-	const dispatch = createEventDispatcher();
-
-	function handleChange(event) {
-		const newValue = event.target.value;
-		value = newValue;
-		dispatch('input', newValue);
-	}
+	let text = `Enter your note here!`;
 </script>
 
-<input type="text" bind:value on:input={handleChange} />
+<div><textarea bind:value={text} /></div>
+
+<style>
+	textarea {
+		width: 50%;
+		height: 200px;
+	}
+</style>
