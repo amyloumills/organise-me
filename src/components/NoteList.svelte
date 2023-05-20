@@ -1,23 +1,33 @@
-<!-- <script lang="ts">
-	import { writable } from 'svelte/store';
-
+<script lang="ts">
+	import { each } from 'svelte/internal';
 	import Note from '../components/Note.svelte';
+	import type { NoteData } from '../model';
 
-	let notes = writable<{}[]>([]);
-
-	function addNote() {
-		notes.update((arr) => [...arr, {}]);
+	function onDelete(note: NoteData) {
+		notes = notes.filter((n: NoteData) => n.id !== note.id);
 	}
+
+	let notes: NoteData[] = [
+		{
+			id: '1',
+			title: 'my first note',
+			body: 'hello this is my first note',
+			completed: false,
+			inProgress: false
+		},
+		{
+			id: '2',
+			title: 'my second note',
+			body: 'hello this is my second note',
+			completed: false,
+			inProgress: false
+		}
+	];
 </script>
 
-
-
-{#each $notes as textbox, i}
-	<Note key={i} />
-{/each} -->
-
-<script>
-	import Note from '../components/Note.svelte';
-</script>
-
-<div><Note on:delete /></div>
+<div>
+	<!--This is instead of map!!!!-->
+	{#each notes as note}
+		<Note data={note} on:delete={() => onDelete(note)} /> />
+	{/each}
+</div>

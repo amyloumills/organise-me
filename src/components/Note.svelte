@@ -1,14 +1,8 @@
 <script lang="ts">
-	import type { Note } from '../model';
+	import type { NoteData } from '../model';
 	import NoteActions from './NoteActions.svelte';
 
-	let data: Note = {
-		id: 'i',
-		title: 'my first note',
-		body: 'hello this is my first note',
-		completed: false,
-		inProgress: false
-	};
+	export let data: NoteData;
 </script>
 
 <div>

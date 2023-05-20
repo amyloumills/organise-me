@@ -1,6 +1,6 @@
 // place for types
 
-export interface Note {
+export interface NoteData {
     id: string;
     title: string;
     body: string;
