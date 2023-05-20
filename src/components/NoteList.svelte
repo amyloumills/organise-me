@@ -27,7 +27,8 @@
 
 <div>
 	<!--This is instead of map!!!!-->
-	{#each notes as note}
-		<Note data={note} on:delete={() => onDelete(note)} /> />
+	{#each notes as note (note.id)}
+		<!--remember keyed each statements instead of key=note.id-->
+		<Note bind:data={note} on:delete={() => onDelete(note)} />
 	{/each}
 </div>
