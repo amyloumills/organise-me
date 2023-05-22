@@ -3,26 +3,11 @@
 	import Note from '../components/Note.svelte';
 	import type { NoteData } from '../model';
 
+	export let notes: NoteData[];
+
 	function onDelete(note: NoteData) {
 		notes = notes.filter((n: NoteData) => n.id !== note.id);
 	}
-
-	let notes: NoteData[] = [
-		{
-			id: '1',
-			title: 'my first note',
-			body: 'hello this is my first note',
-			completed: false,
-			inProgress: false
-		},
-		{
-			id: '2',
-			title: 'my second note',
-			body: 'hello this is my second note',
-			completed: false,
-			inProgress: false
-		}
-	];
 </script>
 
 <div>
