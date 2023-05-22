@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { each } from 'svelte/internal';
-	import Note from '../components/Note.svelte';
-	import type { NoteData } from '../model';
+	import Note from './Note.svelte';
+	import type { NoteData } from '../../model';
 
 	export let notes: NoteData[];
 

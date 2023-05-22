@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { NoteData } from '../model';
+	import type { NoteData } from '../../model';
 	import { v4 as uuidv4 } from 'uuid'
 	export let notes: NoteData[];
 
@@ -8,6 +8,9 @@
 	function onKeyDown(e: KeyboardEvent) {
 		if (e.key != 'Enter') 
 			return;
+
+		if (title.length < 3)
+		return;
 
 		notes = [
 			...notes,

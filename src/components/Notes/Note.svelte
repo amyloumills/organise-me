@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { NoteData } from '../model';
+	import type { NoteData } from '../../model';
 	import NoteActions from './NoteActions.svelte';
 
 	export let data: NoteData;

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import NoteList from '../components/NoteList.svelte';
-	import NoteCreate from '../components/NoteCreate.svelte';
+	import NoteList from '../components/Notes/NoteList.svelte';
+	import NoteCreate from '../components/Notes/NoteCreate.svelte';
 	import type { NoteData } from '../model';
 
 	let notes: NoteData[] = [];
