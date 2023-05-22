@@ -8,7 +8,7 @@
 <div>
 	<p contenteditable="true" spellcheck="false" bind:textContent={data.title} />
 	<p>{data.body}</p>
-	<NoteActions on:delete />
+	<NoteActions on:delete on:edit />
 </div>
 
 <style>

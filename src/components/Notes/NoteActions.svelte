@@ -5,10 +5,14 @@
 	function onDelete() {
 		dispatch('delete'); // custom name here can be used like props - on:delete. Could be on:hello if I wanted
 	}
+
+	function onEdit() {
+		dispatch('edit');
+	}
 </script>
 
 <div>
-	<button>Edit</button>
+	<button on:click={onEdit}>Edit</button>
 	<button type="button" on:click={() => onDelete()}>Delete</button>
 </div>
 
