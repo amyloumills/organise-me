@@ -6,7 +6,7 @@
 </script>
 
 <div>
-	<p contenteditable="true" bind:textContent={data.title} />
+	<p contenteditable="true" spellcheck="false" bind:textContent={data.title} />
 	<p>{data.body}</p>
 	<NoteActions on:delete />
 </div>

@@ -1,19 +1,18 @@
 <script lang="ts">
 	import type { NoteData } from '../model';
-	import { v4 as uuidv4 } from 'uuid';
+	import { v4 as uuidv4 } from 'uuid'
 	export let notes: NoteData[];
 
 	let title = '';
 
 	function onKeyDown(e: KeyboardEvent) {
-		if (e.key != 'Enter') {
+		if (e.key != 'Enter') 
 			return;
-		}
 
 		notes = [
 			...notes,
 			{
-				id: '4',
+				id: uuidv4(),
 				title,
 				completed: false,
 				body: '',
