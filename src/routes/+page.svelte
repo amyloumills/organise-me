@@ -2,8 +2,8 @@
 	import NoteList from '../components/Notes/NoteList.svelte';
 	import NoteCreate from '../components/Notes/NoteCreate.svelte';
 	import type { NoteData } from '../model';
-	import Modal from '../components/Modal/Modal.svelte';
 	import EditModal from '../components/Modal/EditModal.svelte';
+	import { onMount } from 'svelte';
 
 	let notes: NoteData[] = [];
 
@@ -17,10 +17,35 @@
 
 	function onNoteEditSave(e) {
 		notes = notes.map((n: NoteData) => (n.id === e.detail.id ? e.detail : n));
+		saveToLocalStorage();
 	}
+
+	function saveToLocalStorage() {
+		window.localStorage.setItem('notes', JSON.stringify(notes));
+	}
+
+	// like useEffect - lifecycle hook
+	onMount(() => {
+		const allNotes = window.localStorage.getItem('notes');
+		if (allNotes === null) {
+			return;
+		} else {
+			try {
+				const data: NoteData[] = JSON.parse(allNotes);
+				notes = data;
+			} catch (e) {
+				console.log(e);
+			}
+		}
+	});
 </script>
 
 <!-- main page nav -->
-<NoteCreate bind:notes />
-<NoteList bind:notes on:edit={onNoteEdit} />
+<NoteCreate bind:notes on:create={saveToLocalStorage} />
+<NoteList
+	bind:notes
+	on:edit={onNoteEdit}
+	on:delete={saveToLocalStorage}
+	on:titleChange={saveToLocalStorage}
+/>
 <EditModal data={editModalData} showModal={editModalVisible} on:save={onNoteEditSave} />

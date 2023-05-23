@@ -1,7 +1,11 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte';
 	import type { NoteData } from '../../model';
 	import { v4 as uuidv4 } from 'uuid';
+
 	export let notes: NoteData[];
+
+	const dispatch = createEventDispatcher();
 
 	let title = '';
 
@@ -20,7 +24,7 @@
 				inProgress: false
 			}
 		];
-
+		dispatch('create');
 		title = '';
 	}
 </script>

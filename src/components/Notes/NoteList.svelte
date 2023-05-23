@@ -10,6 +10,7 @@
 
 	function onDelete(note: NoteData) {
 		notes = notes.filter((n: NoteData) => n.id !== note.id);
+		dispatch('delete');
 	}
 </script>
 
@@ -19,6 +20,7 @@
 		<!--remember keyed each statements instead of key=note.id-->
 		<Note
 			bind:data={note}
+			on:titleChange
 			on:edit={() => dispatch('edit', note)}
 			on:delete={() => onDelete(note)}
 		/>
