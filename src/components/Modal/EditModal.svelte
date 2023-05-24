@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import type { NoteData } from '../../model';
+	import type { NoteData } from '../../types';
 	import Modal from './Modal.svelte';
 
 	export let showModal = false;

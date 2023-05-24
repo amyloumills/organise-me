@@ -1,5 +1,3 @@
-// place for types
-
 export interface NoteData {
     id: string; //UUID string
     title: string; //250 max chars

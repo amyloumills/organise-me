@@ -1,7 +1,7 @@
 <script lang="ts">
 	import NoteList from '../components/Notes/NoteList.svelte';
 	import NoteCreate from '../components/Notes/NoteCreate.svelte';
-	import type { NoteData } from '../model';
+	import type { NoteData } from '../types';
 	import EditModal from '../components/Modal/EditModal.svelte';
 	import { onMount } from 'svelte';
 

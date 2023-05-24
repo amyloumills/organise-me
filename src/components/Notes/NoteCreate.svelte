@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import type { NoteData } from '../../model';
+	import type { NoteData } from '../../types';
 	import { v4 as uuidv4 } from 'uuid';
 
 	export let notes: NoteData[];
@@ -30,6 +30,7 @@
 		];
 		dispatch('create');
 		title = '';
+		e.preventDefault();
 	}
 </script>
 

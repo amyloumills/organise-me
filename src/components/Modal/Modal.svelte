@@ -4,11 +4,17 @@
 	function closeModal() {
 		showModal = false;
 	}
+
+	function handleKeyDown() {
+		console.log('I need to change this');
+	}
 </script>
 
 {#if showModal}
-	<div class="modal-background" on:click={closeModal}>
-		<div class="modal" on:click|stopPropagation><slot /></div>
+	<div class="modal-background" on:click={closeModal} on:keydown={handleKeyDown}>
+		<div class="modal" on:click|stopPropagation on:keydown={handleKeyDown}>
+			<slot />
+		</div>
 		<!--Stop propogation prevents bubbling-->
 	</div>
 {/if}
