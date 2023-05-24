@@ -11,7 +11,7 @@
 	let editModalData: NoteData | null = null;
 
 	function onNoteEdit(e) {
-		editModalData = structuredClone(e.detail);
+		editModalData = structuredClone(e.detail); // clones the object
 		editModalVisible = true;
 	}
 
