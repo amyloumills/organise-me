@@ -40,7 +40,6 @@
 	});
 </script>
 
-<!-- main page nav -->
 <NoteCreate bind:notes on:create={saveToLocalStorage} />
 <NoteList
 	bind:notes

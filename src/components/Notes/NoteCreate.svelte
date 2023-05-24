@@ -19,9 +19,13 @@
 			{
 				id: uuidv4(),
 				title,
-				completed: false,
 				body: '',
-				inProgress: false
+				priority: '',
+				status: '',
+				tagIds: [],
+				pinned: false,
+				createdAt: 0,
+				updatedAt: 0
 			}
 		];
 		dispatch('create');
