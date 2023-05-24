@@ -48,4 +48,4 @@
 	on:delete={saveToLocalStorage}
 	on:titleChange={saveToLocalStorage}
 />
-<EditModal data={editModalData} showModal={editModalVisible} on:save={onNoteEditSave} />
+<EditModal bind:data={editModalData} bind:showModal={editModalVisible} on:save={onNoteEditSave} />
