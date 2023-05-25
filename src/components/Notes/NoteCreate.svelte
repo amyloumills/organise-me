@@ -44,6 +44,5 @@
 		resize: none;
 		font-size: 1rem;
 		padding: 10px;
-		font-family: 'Times New Roman', Times, serif;
 	}
 </style>

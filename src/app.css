@@ -1,0 +1,13 @@
+button {
+    transition: background-color 200ms;
+    border-radius: 8px;
+    outline: none;
+    border-style: none;
+}
+
+textarea {
+    overflow: auto;
+}
+* {
+    font-family: 'Nunito Sans Variable', sans-serif;
+}

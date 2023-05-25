@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource-variable/nunito-sans": "^5.0.2",
 		"@types/uuid": "^9.0.1",
 		"uuid": "^9.0.0"
 	}

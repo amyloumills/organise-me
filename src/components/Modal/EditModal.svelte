@@ -42,16 +42,12 @@
 	button {
 		width: 100px;
 		background-color: #f19066;
-		border-style: none;
-		border-radius: 8px;
 		color: #ffffff;
 		font-weight: 500;
 		line-height: 20px;
 		height: 40px;
 		margin: 0;
-		outline: none;
 		padding: 10px 16px;
-		transition: background-color 200ms;
 	}
 	button:hover {
 		background-color: #f3a683;
@@ -61,8 +57,5 @@
 		display: flex;
 		flex-direction: row nowrap;
 		justify-content: space-between;
-	}
-	textarea {
-		overflow: auto;
 	}
 </style>
