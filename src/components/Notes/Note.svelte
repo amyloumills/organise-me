@@ -1,14 +1,24 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte';
 	import type { NoteData } from '../../types';
 	import NoteActions from './NoteActions.svelte';
 
 	export let data: NoteData;
+
+	const dispatch = createEventDispatcher();
+
+	function onTitleBlur() {
+		dispatch('titleChange');
+	}
 </script>
 
 <div>
-	<p>
-		{data.title}
-	</p>
+	<p
+		contenteditable="true"
+		spellcheck="false"
+		on:blur={onTitleBlur}
+		bind:textContent={data.title}
+	/>
 	<p>{data.body}</p>
 	<NoteActions on:delete on:edit />
 </div>
