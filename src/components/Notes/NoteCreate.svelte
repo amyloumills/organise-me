@@ -9,7 +9,7 @@
 
 	let showModal = false;
 	let newNote: NoteData = {
-		id: '',
+		id: uuidv4(),
 		title: '',
 		body: '',
 		priority: '',
@@ -20,11 +20,26 @@
 		updatedAt: 0
 	};
 
-	function createNote() {
-		newNote.id = uuidv4();
+	let inProgress = false;
+
+	async function createNote() {
+		if (inProgress) return;
+		inProgress = true;
 		notes = [...notes, newNote];
 
 		dispatch('create');
+		inProgress = false;
+		newNote = {
+			id: uuidv4(),
+			title: '',
+			body: '',
+			priority: '',
+			status: '',
+			tagIds: [],
+			pinned: false,
+			createdAt: 0,
+			updatedAt: 0
+		};
 		closeModal();
 	}
 
