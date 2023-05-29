@@ -45,26 +45,28 @@
 	</span>
 </Modal>
 
-<style>
+<style lang="scss">
 	.button-span {
 		display: flex;
 		flex-direction: row nowrap;
 		justify-content: space-between;
 	}
+
 	.create-button {
 		background-color: #546de5;
 		color: #ffffff;
 		padding: 10px;
+		&:hover {
+			background-color: #778beb;
+		}
 	}
-	.create-button:hover {
-		background-color: #778beb;
-	}
+
 	.cancel-button {
 		padding: 10px;
 		background-color: #e15f41;
 		color: #ffffff;
-	}
-	.cancel-button:hover {
-		background-color: #e77f67;
+		&:hover {
+			background-color: #e77f67;
+		}
 	}
 </style>

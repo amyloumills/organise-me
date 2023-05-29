@@ -58,9 +58,9 @@
 		height: 40px;
 		margin: 0;
 		padding: 10px 16px;
-	}
-	button:hover {
-		background-color: #f3a683;
+		&:hover {
+			background-color: #f3a683;
+		}
 	}
 
 	.button-span {
