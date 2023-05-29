@@ -3,12 +3,14 @@
 	import type { NoteData } from '../../types';
 	import { v4 as uuidv4 } from 'uuid';
 	import CreateModal from '../Modal/CreateModal.svelte';
+	import Add from '../../lib/Icons/Add.svelte';
 
 	export let notes: NoteData[];
 
 	const dispatch = createEventDispatcher();
 
 	let showModal = false;
+
 	let newNote: NoteData = {
 		id: uuidv4(),
 		title: '',
@@ -53,27 +55,26 @@
 	}
 </script>
 
-<button on:click={openModal} class="create-button">Create Note</button>
+<button on:click={openModal} class="create-button">Create Note<Add /></button>
 
 {#if showModal}
 	<CreateModal {newNote} on:create={createNote} on:close={closeModal} />
 {/if}
 
-<style>
+<style lang="scss">
 	.create-button {
-		width: 20vw;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 10vw;
 		height: 50px;
 		margin-left: 10px;
 		font-size: 1rem;
 		padding: 10px;
-	}
-	button:hover {
-		background-color: #f3a683;
-	}
-
-	.button-span {
-		display: flex;
-		flex-direction: row nowrap;
-		justify-content: space-between;
+		background-color: #546de5;
+		color: #ffffff;
+		&:hover {
+			background-color: #778beb;
+		}
 	}
 </style>

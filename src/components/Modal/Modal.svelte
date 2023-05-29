@@ -39,12 +39,13 @@
 		margin: 15% auto;
 		padding: 20px;
 		border: 1px solid #888;
+		border-radius: 8px;
 		width: 40%;
+		max-width: 100%;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
 		transition: all 2s;
-		border-radius: 5px;
 	}
 
 	@keyframes fade-in {
