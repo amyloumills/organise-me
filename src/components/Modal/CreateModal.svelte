@@ -126,4 +126,22 @@
 		-webkit-transform: rotate(45deg);
 		transform: rotate(45deg);
 	}
+
+	.priority-span {
+		label {
+			color: gray;
+			font-size: 0.8em;
+			font-weight: 700;
+		}
+		select {
+			margin-left: 5px;
+			padding: 0 5px;
+			font-weight: 700;
+			color: gray;
+			font-size: 0.8em;
+			&:focus {
+				border-radius: 5px;
+			}
+		}
+	}
 </style>
