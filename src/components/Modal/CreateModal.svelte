@@ -26,7 +26,7 @@
 <Modal bind:showModal>
 	<h3>Create Note</h3>
 	<input type="text" bind:value={newNote.title} placeholder="Enter title" />
-	<textarea bind:value={newNote.body} />
+	<textarea bind:value={newNote.body} placeholder="Enter your note" />
 	<span>
 		<input bind:checked={newNote.pinned} type="checkbox" id="pinned" />
 		<label for="pinned">Pin to top</label>
@@ -68,5 +68,62 @@
 		&:hover {
 			background-color: #e77f67;
 		}
+	}
+
+	input,
+	textarea {
+		font-weight: 700;
+		padding: 10px;
+		border-width: 1px;
+		border-color: #f3a683;
+		border-style: solid;
+		background: url('transparent');
+		&:focus {
+			background-color: #fcf2ef;
+			transition: all 0.3s ease;
+			color: gray;
+		}
+	}
+
+	input[type='checkbox'] {
+		display: none;
+	}
+	input[type='checkbox'] + label {
+		display: block;
+		position: relative;
+		padding-left: 35px;
+		margin-bottom: 20px;
+		font-weight: 700;
+		color: gray;
+		font-size: 0.8em;
+		padding-top: 2px;
+		cursor: pointer;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:before {
+			content: '';
+			display: block;
+			width: 20px;
+			height: 20px;
+			border: 1px solid #f3a683;
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 1;
+			-webkit-transition: all 0.12s, border-color 0.08s;
+			transition: all 0.12s, border-color 0.08s;
+		}
+	}
+	input[type='checkbox']:checked + label:before {
+		width: 10px;
+		top: -5px;
+		left: 5px;
+		border-radius: 0;
+		opacity: 1;
+		border-top-color: transparent;
+		border-left-color: transparent;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
 	}
 </style>
