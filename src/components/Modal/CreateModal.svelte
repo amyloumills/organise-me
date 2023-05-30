@@ -82,6 +82,7 @@
 			background-color: #fcf2ef;
 			transition: all 0.3s ease;
 			color: gray;
+			outline: none;
 		}
 	}
 
@@ -139,8 +140,11 @@
 			font-weight: 700;
 			color: gray;
 			font-size: 0.8em;
+			outline: none;
+			border: 1px solid #f3a683;
 			&:focus {
-				border-radius: 5px;
+				outline: none;
+				border: 1px solid #f3a683;
 			}
 		}
 	}
