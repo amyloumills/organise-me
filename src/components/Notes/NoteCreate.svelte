@@ -73,6 +73,7 @@
 		padding: 10px;
 		background-color: #546de5;
 		color: #ffffff;
+		min-width: 140px;
 		&:hover {
 			background-color: #778beb;
 		}
