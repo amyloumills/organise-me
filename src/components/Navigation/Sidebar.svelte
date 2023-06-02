@@ -19,7 +19,8 @@
 		position: absolute;
 		width: 25vw;
 		height: 100vh;
-		background-color: paleturquoise;
+		background-color: #574b90;
+
 		left: -100%;
 	}
 
@@ -37,6 +38,10 @@
 
 		a {
 			text-decoration: none;
+			color: #ffffff;
+			&:hover {
+				font-weight: 700;
+			}
 		}
 	}
 </style>

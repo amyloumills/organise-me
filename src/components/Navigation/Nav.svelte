@@ -23,7 +23,7 @@
 		padding-left: 10px;
 		background-color: #ffffff;
 		margin: 0;
-		border-bottom: 1px solid gray;
+		border-bottom: 1px solid #596275;
 		display: flex;
 		justify-content: flex-start;
 	}

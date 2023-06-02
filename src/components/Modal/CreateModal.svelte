@@ -81,7 +81,7 @@
 		&:focus {
 			background-color: #fcf2ef;
 			transition: all 0.3s ease;
-			color: gray;
+			color: #596275;
 			outline: none;
 		}
 	}
@@ -95,7 +95,7 @@
 		padding-left: 35px;
 		margin-bottom: 20px;
 		font-weight: 700;
-		color: gray;
+		color: #596275;
 		font-size: 0.8em;
 		padding-top: 2px;
 		cursor: pointer;
@@ -130,7 +130,7 @@
 
 	.priority-span {
 		label {
-			color: gray;
+			color: #596275;
 			font-size: 0.8em;
 			font-weight: 700;
 		}
@@ -138,7 +138,7 @@
 			margin-left: 5px;
 			padding: 0 5px;
 			font-weight: 700;
-			color: gray;
+			color: #596275;
 			font-size: 0.8em;
 			outline: none;
 			border: 1px solid #f3a683;
