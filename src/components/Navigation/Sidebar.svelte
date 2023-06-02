@@ -18,7 +18,7 @@
 	aside {
 		position: absolute;
 		width: 25vw;
-		height: 100vh;
+		height: calc(100vh - 76px);
 		background-color: #574b90;
 
 		left: -100%;
