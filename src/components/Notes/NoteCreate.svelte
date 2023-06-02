@@ -68,7 +68,7 @@
 		justify-content: space-evenly;
 		width: 10vw;
 		height: 50px;
-		margin-left: 10px;
+		margin: 10px;
 		font-size: 1rem;
 		padding: 10px;
 		background-color: #546de5;

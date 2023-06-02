@@ -1,24 +1,42 @@
-<script>
-	export let open = false;
+<script lang="ts">
+	export let sidebarVisible = false;
+	import { fly } from 'svelte/transition';
 </script>
 
-<aside class:open>
-	<nav>
-		<p>hello</p>
-		<p>placeholder</p>
-	</nav>
-</aside>
+{#if sidebarVisible}
+	<aside class:sidebarVisible transition:fly={{ x: -500, opacity: 1, duration: 500 }}>
+		<nav>
+			<div>
+				<a href="www.google.com">hello</a>
+				<a href="www.google.com">placeholder</a>
+			</div>
+		</nav>
+	</aside>
+{/if}
 
-<style>
+<style lang="scss">
 	aside {
-		display: absolute;
-		width: 100%;
-		height: 100%;
+		position: absolute;
+		width: 25vw;
+		height: 100vh;
+		background-color: paleturquoise;
 		left: -100%;
-		transition: left 0.3s ease-in-out;
 	}
 
-	.open {
+	.sidebarVisible {
 		left: 0;
+	}
+	div {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		gap: 25px;
+
+		padding-top: 20px;
+		padding-left: 20px;
+
+		a {
+			text-decoration: none;
+		}
 	}
 </style>

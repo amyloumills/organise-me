@@ -1,14 +1,16 @@
-<script>
+<script lang="ts">
 	import Burger from './Burger.svelte';
+	import Sidebar from './Sidebar.svelte';
 
-	export let sidebar = false;
+	export let sidebarVisible = false;
 </script>
 
 <header>
 	<nav>
-		<Burger bind:open={sidebar} />
+		<Burger bind:sidebarVisible />
 		<h1>Organise Me</h1>
 	</nav>
+	<Sidebar bind:sidebarVisible />
 </header>
 
 <style>
@@ -22,7 +24,6 @@
 		background-color: #ffffff;
 		margin: 0;
 		border-bottom: 1px solid gray;
-		margin-bottom: 25px;
 		display: flex;
 		justify-content: flex-start;
 	}

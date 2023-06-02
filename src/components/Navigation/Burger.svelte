@@ -1,8 +1,14 @@
-<script>
+<script lang="ts">
 	export let open = false;
+	export let sidebarVisible = false;
+
+	function toggleClick() {
+		open = !open;
+		sidebarVisible = !sidebarVisible;
+	}
 </script>
 
-<button class:open on:click={() => (open = !open)}>
+<button class:open on:click={toggleClick}>
 	<svg width="32" height="24">
 		<line id="top" x1="0" y1="2" x2="32" y2="2" />
 		<line id="middle" x1="0" y1="12" x2="24" y2="12" />
