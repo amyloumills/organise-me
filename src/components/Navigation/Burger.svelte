@@ -31,10 +31,6 @@
 		transition: transform 0.3s ease-in-out;
 	}
 
-	button {
-		z-index: 20;
-	}
-
 	.open svg {
 		transform: scale(0.7);
 	}
