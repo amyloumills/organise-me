@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { NoteData } from '../../types';
 	import NoteActions from './NoteActions.svelte';
+	import Completed from '../../lib/Icons/Completed.svelte';
 
 	export let data: NoteData;
 </script>
@@ -8,7 +9,12 @@
 <div>
 	<p class="title">{data.title}</p>
 	<p class="body">{data.body}</p>
-	<NoteActions on:delete on:edit />
+	<span class="completed">
+		<span class="completed-button"
+			>{#if data.status === 'completed'}<Completed />{/if}
+		</span>
+		<NoteActions on:delete on:edit />
+	</span>
 </div>
 
 <style>
@@ -26,5 +32,16 @@
 	}
 	.body {
 		font-weight: 300;
+	}
+	.completed {
+		display: flex;
+		justify-content: space-between;
+	}
+	.completed-button {
+		padding-top: 5px;
+		color: #01a3a4;
+		&:hover {
+			color: #00d2d3;
+		}
 	}
 </style>
