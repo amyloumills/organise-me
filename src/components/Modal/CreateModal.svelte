@@ -41,7 +41,7 @@
 	</span>
 	<span class="button-span">
 		<button class="cancel-button" on:click={closeModal}>Cancel</button>
-		<button class="create-button" on:click={create}>Create Note</button>
+		<button class="create-button" on:click|once={create}>Create Note</button>
 	</span>
 </Modal>
 

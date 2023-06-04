@@ -23,15 +23,11 @@
 		updatedAt: 0
 	};
 
-	let inProgress = false;
-
 	async function createNote() {
-		if (inProgress) return;
-		inProgress = true;
 		notes = [...notes, newNote];
 		console.log(notes);
 		dispatch('create');
-		inProgress = false;
+
 		newNote = {
 			id: uuidv4(),
 			title: '',
