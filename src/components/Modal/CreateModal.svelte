@@ -19,8 +19,13 @@
 
 	export let showModal = true;
 
-	const create = () => dispatch('create');
-	const closeModal = () => dispatch('close');
+	function create() {
+		dispatch('create');
+	}
+
+	function closeModal() {
+		dispatch('close');
+	}
 </script>
 
 <Modal bind:showModal>

@@ -9,7 +9,7 @@
 
 	const dispatch = createEventDispatcher();
 
-	let showModal = false;
+	export let showModal = false;
 
 	let newNote: NoteData = {
 		id: uuidv4(),
@@ -54,7 +54,7 @@
 <button on:click={openModal} class="create-button">Create Note<Add /></button>
 
 {#if showModal}
-	<CreateModal {newNote} on:create={createNote} on:close={closeModal} />
+	<CreateModal {newNote} on:create={createNote} on:close={closeModal} bind:showModal />
 {/if}
 
 <style lang="scss">
