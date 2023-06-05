@@ -12,6 +12,16 @@
 		notes = notes.filter((n: NoteData) => n.id !== note.id);
 		dispatch('delete');
 	}
+
+	$: notes = notes.sort((a, b) => {
+		if (a.pinned && !b.pinned) {
+			return -1;
+		} else if (!a.pinned && b.pinned) {
+			return 1;
+		} else {
+			return a.createdAt - b.createdAt;
+		}
+	});
 </script>
 
 <div>
