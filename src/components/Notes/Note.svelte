@@ -2,12 +2,17 @@
 	import type { NoteData } from '../../types';
 	import NoteActions from './NoteActions.svelte';
 	import Completed from '../../lib/Icons/Completed.svelte';
+	import Pin from '../../lib/Icons/Pin.svelte';
 
 	export let data: NoteData;
 </script>
 
 <div>
-	<p class="title">{data.title}</p>
+	<span class="pinned">
+		<p class="title">{data.title}</p>
+
+		{#if data.pinned}<Pin />{/if}</span
+	>
 	<p class="body">{data.body}</p>
 	<span class="completed">
 		<span class="completed-button"
@@ -43,5 +48,10 @@
 		&:hover {
 			color: #00d2d3;
 		}
+	}
+	.pinned {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 </style>
