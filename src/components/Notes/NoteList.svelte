@@ -22,17 +22,38 @@
 			return a.createdAt - b.createdAt;
 		}
 	});
+
+	$: completedNotes = notes.filter((note) => note.status === 'completed');
+	$: activeNotes = notes.filter((note) => note.status !== 'completed');
 </script>
 
-<div>
-	<!--This is instead of map!!!!-->
-	{#each notes as note (note.id)}
-		<!--remember keyed each statements instead of key=note.id-->
-		<Note
-			bind:data={note}
-			on:titleChange
-			on:edit={() => dispatch('edit', note)}
-			on:delete={() => onDelete(note)}
-		/>
-	{/each}
+<div class="note-container">
+	<div>
+		<h2>Active</h2>
+		{#each activeNotes as note (note.id)}
+			<Note
+				bind:data={note}
+				on:edit={() => dispatch('edit', note)}
+				on:delete={() => onDelete(note)}
+			/>
+		{/each}
+	</div>
+
+	<div>
+		<h2>Completed</h2>
+		{#each completedNotes as note (note.id)}
+			<Note
+				bind:data={note}
+				on:edit={() => dispatch('edit', note)}
+				on:delete={() => onDelete(note)}
+			/>
+		{/each}
+	</div>
 </div>
+
+<style>
+	.note-container {
+		display: grid;
+		grid-template-columns: 50% auto;
+	}
+</style>
