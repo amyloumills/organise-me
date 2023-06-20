@@ -3,17 +3,18 @@
 	import NoteActions from './NoteActions.svelte';
 	import Completed from '../../lib/Icons/Completed.svelte';
 	import Pin from '../../lib/Icons/Pin.svelte';
-
+	import Tag from '../Tags/Tag.svelte';
 	export let data: NoteData;
 </script>
 
-<div>
+<div class="note-container">
 	<span class="pinned">
 		<p class="title">{data.title}</p>
 
 		{#if data.pinned}<Pin />{/if}</span
 	>
 	<p class="body">{data.body}</p>
+	<Tag />
 	<span class="completed">
 		<span class="completed-button"
 			>{#if data.status === 'completed'}<Completed />{/if}
@@ -23,7 +24,7 @@
 </div>
 
 <style>
-	div {
+	.note-container {
 		display: flex;
 		flex-direction: column;
 		margin: 10px;
