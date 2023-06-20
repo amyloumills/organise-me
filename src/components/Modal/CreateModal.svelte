@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	import Modal from './Modal.svelte';
 	import { v4 as uuidv4 } from 'uuid';

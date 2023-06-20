@@ -2,10 +2,21 @@
 	import { createEventDispatcher } from 'svelte';
 	import Bin from '../../lib/Icons/Bin.svelte';
 	import Edit from '../../lib/Icons/Edit.svelte';
+	import DeleteModal from '../Modal/DeleteModal.svelte';
 
 	const dispatch = createEventDispatcher(); // creates a custom event that can be used in the parent.
+
+	export let showModal = false;
+
+	function closeModal() {
+		showModal = false;
+	}
+
+	function openModal() {
+		showModal = true;
+	}
 	function onDelete() {
-		dispatch('delete'); // custom name here can be used like props - on:delete. Could be on:hello if I wanted
+		dispatch('delete');
 	}
 
 	function onEdit() {
@@ -15,8 +26,11 @@
 
 <span>
 	<button class="edit-button" type="button" on:click={onEdit}><Edit /></button>
-	<button class="delete-button" type="button" on:click={() => onDelete()}><Bin /></button>
+	<button class="delete-button" type="button" on:click={openModal}><Bin /></button>
 </span>
+{#if showModal}
+	<DeleteModal bind:showModal on:close{closeModal} on:delete={onDelete} />
+{/if}
 
 <style>
 	span {

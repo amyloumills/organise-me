@@ -8,6 +8,7 @@
 	let notes: NoteData[] = [];
 
 	let editModalVisible = false;
+
 	let editModalData: NoteData | null = null;
 
 	function onNoteEdit(e) {
@@ -41,10 +42,6 @@
 </script>
 
 <NoteCreate bind:notes on:create={saveToLocalStorage} />
-<NoteList
-	bind:notes
-	on:edit={onNoteEdit}
-	on:delete={saveToLocalStorage}
-	on:titleChange={saveToLocalStorage}
-/>
+
+<NoteList bind:notes on:edit={onNoteEdit} on:delete={saveToLocalStorage} />
 <EditModal bind:data={editModalData} bind:showModal={editModalVisible} on:save={onNoteEditSave} />
