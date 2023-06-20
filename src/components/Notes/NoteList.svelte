@@ -56,4 +56,7 @@
 		display: grid;
 		grid-template-columns: 50% auto;
 	}
+	h2 {
+		margin-left: 10px;
+	}
 </style>

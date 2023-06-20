@@ -4,13 +4,9 @@
 	import Edit from '../../lib/Icons/Edit.svelte';
 	import DeleteModal from '../Modal/DeleteModal.svelte';
 
-	const dispatch = createEventDispatcher(); // creates a custom event that can be used in the parent.
+	const dispatch = createEventDispatcher();
 
 	export let showModal = false;
-
-	function closeModal() {
-		showModal = false;
-	}
 
 	function openModal() {
 		showModal = true;
