@@ -6,10 +6,9 @@
 	import Add from '../../lib/Icons/Add.svelte';
 
 	export let notes: NoteData[];
+	export let showModal = false;
 
 	const dispatch = createEventDispatcher();
-
-	export let showModal = false;
 
 	let newNote: NoteData = {
 		id: uuidv4(),
@@ -25,7 +24,6 @@
 
 	async function createNote() {
 		notes = [...notes, newNote];
-		console.log(notes);
 		dispatch('create');
 
 		newNote = {

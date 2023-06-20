@@ -25,7 +25,6 @@
 		window.localStorage.setItem('notes', JSON.stringify(notes));
 	}
 
-	// like useEffect - lifecycle hook
 	onMount(() => {
 		const allNotes = window.localStorage.getItem('notes');
 		if (allNotes === null) {

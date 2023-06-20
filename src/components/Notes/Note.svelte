@@ -18,7 +18,7 @@
 		<span class="completed-button"
 			>{#if data.status === 'completed'}<Completed />{/if}
 		</span>
-		<NoteActions on:delete on:edit />
+		<NoteActions bind:data on:delete on:edit />
 	</span>
 </div>
 

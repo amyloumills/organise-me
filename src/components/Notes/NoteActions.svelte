@@ -3,10 +3,12 @@
 	import Bin from '../../lib/Icons/Bin.svelte';
 	import Edit from '../../lib/Icons/Edit.svelte';
 	import DeleteModal from '../Modal/DeleteModal.svelte';
+	import type { NoteData } from '../../types';
+
+	export let data: NoteData;
+	export let showModal = false;
 
 	const dispatch = createEventDispatcher();
-
-	export let showModal = false;
 
 	function openModal() {
 		showModal = true;
@@ -25,7 +27,7 @@
 	<button class="delete-button" type="button" on:click={openModal}><Bin /></button>
 </span>
 {#if showModal}
-	<DeleteModal bind:showModal on:close{closeModal} on:delete={onDelete} />
+	<DeleteModal bind:showModal on:close{closeModal} on:delete={onDelete} bind:data />
 {/if}
 
 <style>

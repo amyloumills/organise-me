@@ -1,14 +1,15 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	import Modal from './Modal.svelte';
+	import type { NoteData } from '../../types';
 
 	const dispatch = createEventDispatcher();
+	export let data: NoteData;
 
 	export let showModal = true;
 
 	function closeModal() {
 		showModal = false;
-		console.log(showModal);
 	}
 
 	function onDelete() {
@@ -18,7 +19,7 @@
 </script>
 
 <Modal bind:showModal>
-	<p>Are you sure you want to delete this note?</p>
+	<p>Are you sure you want to delete "{data.title}"?</p>
 	<span class="button-span">
 		<button class="cancel-button" on:click={closeModal}>Cancel</button>
 		<button class="delete-button" on:click|once={onDelete}>Yes</button>
