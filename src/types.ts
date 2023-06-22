@@ -10,9 +10,10 @@ export interface NoteData {
     updatedAt: number;
 }
 
-export interface Tags {
+export interface TagData {
     id: string;
     label: string;
-    createdAt: number;
-    updatedAt: number;
+    colour: string;
+    // createdAt: number;
+    // updatedAt: number;
 }
