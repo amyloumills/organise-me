@@ -2,6 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import Modal from './Modal.svelte';
 	import { v4 as uuidv4 } from 'uuid';
+	import Tags from '../Tags/Tags.svelte';
 
 	export let newNote = {
 		id: uuidv4(),
@@ -43,6 +44,10 @@
 			<option value="normal">Normal</option>
 			<option value="low">Low</option>
 		</select>
+	</span>
+	<span class="tag-select">
+		<p>Select Tag (if required)</p>
+		<Tags />
 	</span>
 	<span class="button-span">
 		<button class="cancel-button" on:click={closeModal}>Cancel</button>
