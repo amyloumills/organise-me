@@ -82,7 +82,7 @@
 		border-width: 1px;
 		border-color: #f3a683;
 		border-style: solid;
-		background: url('transparent');
+
 		&:focus {
 			background-color: #fcf2ef;
 			transition: all 0.3s ease;
