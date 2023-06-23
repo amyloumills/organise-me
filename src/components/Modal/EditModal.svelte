@@ -2,6 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import type { NoteData } from '../../types';
 	import Modal from './Modal.svelte';
+	import Tags from '../Tags/Tags.svelte';
 
 	export let showModal = false;
 	export let data: NoteData;
@@ -42,6 +43,7 @@
 			<option value="completed">Completed</option>
 		</select>
 	</span>
+	<span><Tags editing={true} /></span>
 	<span class="button-span">
 		<button type="button" on:click={closeModal}>Close</button>
 		<button type="button" on:click={saveData}>Save</button>
@@ -49,24 +51,23 @@
 </Modal>
 
 <style lang="scss">
-	button {
-		width: 100px;
-		background-color: #f19066;
-		color: #ffffff;
-		font-weight: 500;
-		line-height: 20px;
-		height: 40px;
-		margin: 0;
-		padding: 10px 16px;
-		&:hover {
-			background-color: #f3a683;
-		}
-	}
-
 	.button-span {
 		display: flex;
 		flex-direction: row nowrap;
 		justify-content: space-between;
+		button {
+			width: 100px;
+			background-color: #f19066;
+			color: #ffffff;
+			font-weight: 500;
+			line-height: 20px;
+			height: 40px;
+			margin: 0;
+			padding: 10px 16px;
+			&:hover {
+				background-color: #f3a683;
+			}
+		}
 	}
 	input,
 	textarea {

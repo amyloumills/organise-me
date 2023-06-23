@@ -1,14 +1,16 @@
 <script lang="ts">
 	export let sidebarVisible = false;
 	import { fly } from 'svelte/transition';
+
+	// I should organise this so there is a link to view all notes. Then I can categorise based on tags.
 </script>
 
 {#if sidebarVisible}
 	<aside class:sidebarVisible transition:fly={{ x: -500, opacity: 1, duration: 500 }}>
 		<nav>
 			<div>
-				<a href="www.google.com">hello</a>
-				<a href="www.google.com">placeholder</a>
+				<a href="www.google.com">Tags</a>
+				<a href="www.google.com">All Notes</a>
 			</div>
 		</nav>
 	</aside>
