@@ -30,7 +30,7 @@
 	<DeleteModal bind:showModal on:close{closeModal} on:delete={onDelete} bind:data />
 {/if}
 
-<style>
+<style lang="scss">
 	span {
 		display: flex;
 		gap: 10px;
@@ -48,7 +48,7 @@
 		}
 	}
 	.delete-button {
-		background-color: #e15f41;
+		background-color: $red;
 		&:hover {
 			background-color: #e77f67;
 		}

@@ -26,7 +26,7 @@
 	</span>
 </Modal>
 
-<style>
+<style lang="scss">
 	.button-span {
 		display: flex;
 		flex-direction: row nowrap;
@@ -34,7 +34,7 @@
 	}
 	.cancel-button {
 		padding: 10px;
-		background-color: #e15f41;
+		background-color: $red;
 		color: #ffffff;
 		&:hover {
 			background-color: #e77f67;

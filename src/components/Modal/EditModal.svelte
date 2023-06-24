@@ -2,7 +2,6 @@
 	import { createEventDispatcher } from 'svelte';
 	import type { NoteData } from '../../types';
 	import Modal from './Modal.svelte';
-	import Tags from '../Tags/Tags.svelte';
 
 	export let showModal = false;
 	export let data: NoteData;
@@ -43,7 +42,6 @@
 			<option value="completed">Completed</option>
 		</select>
 	</span>
-	<span><Tags editing={true} /></span>
 	<span class="button-span">
 		<button type="button" on:click={closeModal}>Close</button>
 		<button type="button" on:click={saveData}>Save</button>
