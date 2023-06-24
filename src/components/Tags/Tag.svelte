@@ -6,6 +6,7 @@
 	import type { TagData } from '../../types';
 
 	export let data: TagData;
+	export let editing = false;
 
 	function getColour(colour: string) {
 		// make sure hex can't be hacked by user
@@ -13,14 +14,28 @@
 	}
 </script>
 
-<!-- <div class="tags" style="border-color: {getColour(data.colour)}">{data.label}</div> -->
-
-<div>
-	<input type="checkbox" id={data.id} name="FrontEnd" value="Front End" />
-	<label for={data.id} style="border-color: {getColour(data.colour)}">{data.label}</label>
-</div>
+{#if editing}
+	<div>
+		<input type="checkbox" id={data.id} name="FrontEnd" value="Front End" />
+		<label for={data.id} style="border-color: {getColour(data.colour)}">{data.label}</label>
+	</div>
+{:else}
+	<div class="tags" style="border-color: {getColour(data.colour)}">{data.label}</div>
+{/if}
 
 <style lang="scss">
+	.tags {
+		font-size: x-small;
+		border: solid 2px;
+		border-radius: 6px;
+		color: black;
+		width: fit-content;
+		padding: 5px;
+		margin-bottom: 10px;
+		background-color: transparent;
+		cursor: default;
+	}
+
 	input[type='checkbox'] {
 		display: none;
 	}

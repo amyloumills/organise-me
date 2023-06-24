@@ -20,7 +20,7 @@
 </script>
 
 <div class="tags">
-	<Tag data={{ id: '1', label: 'Front End', colour: '#546de5' }} />
+	<Tag bind:editing data={{ id: '1', label: 'Front End', colour: '#546de5' }} />
 
 	<!-- {#if editing}
 		{#if adding}

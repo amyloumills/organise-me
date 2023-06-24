@@ -47,7 +47,7 @@
 	</span>
 	<span class="tag-select">
 		<p>Select Tag (if required)</p>
-		<Tags />
+		<Tags editing={true} />
 	</span>
 	<span class="button-span">
 		<button class="cancel-button" on:click={closeModal}>Cancel</button>
