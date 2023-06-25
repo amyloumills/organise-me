@@ -25,29 +25,14 @@
 
 <style lang="scss">
 	.tags {
-		font-size: x-small;
-		border: solid 2px;
-		border-radius: 6px;
-		color: $deep-grey;
-		width: fit-content;
-		padding: 5px;
-		margin-bottom: 10px;
-		background-color: transparent;
-		cursor: default;
+		@include tag-styles;
 	}
 
 	input[type='checkbox'] {
 		display: none;
 	}
 	input[type='checkbox'] + label {
-		font-size: x-small;
-		border: solid 2px;
-		border-radius: 6px;
-		color: $deep-grey;
-		width: fit-content;
-		padding: 5px;
-		margin-bottom: 10px;
-		background-color: transparent;
+		@include tag-styles;
 		cursor: pointer;
 	}
 	input:checked + label {
