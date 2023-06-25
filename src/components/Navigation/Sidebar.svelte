@@ -21,7 +21,7 @@
 		position: absolute;
 		width: 25vw;
 		height: calc(100vh - 76px);
-		background-color: #574b90;
+		background-color: $purple;
 
 		left: -100%;
 	}
@@ -40,7 +40,7 @@
 
 		a {
 			text-decoration: none;
-			color: #ffffff;
+			color: $white;
 			&:hover {
 				font-weight: 700;
 			}

@@ -16,9 +16,9 @@
 	</svg>
 </button>
 
-<style>
+<style lang="scss">
 	button {
-		background-color: white;
+		background-color: $white;
 	}
 	svg {
 		min-height: 24px;

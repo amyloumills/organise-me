@@ -28,7 +28,7 @@
 		font-size: x-small;
 		border: solid 2px;
 		border-radius: 6px;
-		color: black;
+		color: $deep-grey;
 		width: fit-content;
 		padding: 5px;
 		margin-bottom: 10px;
@@ -43,7 +43,7 @@
 		font-size: x-small;
 		border: solid 2px;
 		border-radius: 6px;
-		color: black;
+		color: $deep-grey;
 		width: fit-content;
 		padding: 5px;
 		margin-bottom: 10px;
@@ -51,6 +51,6 @@
 		cursor: pointer;
 	}
 	input:checked + label {
-		background-color: red;
+		background-color: $red;
 	}
 </style>

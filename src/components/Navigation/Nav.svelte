@@ -13,7 +13,7 @@
 	<Sidebar bind:sidebarVisible />
 </header>
 
-<style>
+<style lang="scss">
 	h1 {
 		padding-left: 20px;
 		padding-bottom: 3px;
@@ -21,9 +21,9 @@
 
 	nav {
 		padding-left: 10px;
-		background-color: #ffffff;
+		background-color: $white;
 		margin: 0;
-		border-bottom: 1px solid #596275;
+		border-bottom: 1px solid $deep-grey;
 		display: flex;
 		justify-content: flex-start;
 	}

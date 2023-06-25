@@ -35,18 +35,18 @@
 	.cancel-button {
 		padding: 10px;
 		background-color: $red;
-		color: #ffffff;
+		color: $white;
 		&:hover {
-			background-color: #e77f67;
+			background-color: $red-hover;
 		}
 	}
 
 	.delete-button {
-		background-color: #546de5;
-		color: #ffffff;
+		background-color: $blue;
+		color: $white;
 		padding: 10px;
 		&:hover {
-			background-color: #778beb;
+			background-color: $blue-hover;
 		}
 	}
 </style>

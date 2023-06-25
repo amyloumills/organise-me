@@ -65,11 +65,11 @@
 		margin: 10px;
 		font-size: 1rem;
 		padding: 10px;
-		background-color: #546de5;
-		color: #ffffff;
+		background-color: $blue;
+		color: $white;
 		min-width: 140px;
 		&:hover {
-			background-color: #778beb;
+			background-color: $blue-hover;
 		}
 	}
 </style>

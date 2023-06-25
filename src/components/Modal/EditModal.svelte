@@ -55,31 +55,31 @@
 		justify-content: space-between;
 		button {
 			width: 100px;
-			background-color: #f19066;
-			color: #ffffff;
+			background-color: $coral;
+			color: $white;
 			font-weight: 500;
 			line-height: 20px;
 			height: 40px;
 			margin: 0;
 			padding: 10px 16px;
 			&:hover {
-				background-color: #f3a683;
+				background-color: $coral-hover;
 			}
 		}
 	}
 	input,
 	textarea {
-		color: #596275;
+		color: $deep-grey;
 		font-weight: 700;
 		padding: 10px;
 		border-width: 1px;
-		border-color: #f3a683;
+		border-color: $coral-hover;
 		border-style: solid;
 
 		&:focus {
-			background-color: #fcf2ef;
+			background-color: $off-white;
 			transition: all 0.3s ease;
-			color: #596275;
+			color: $deep-grey;
 			outline: none;
 		}
 	}
@@ -93,7 +93,7 @@
 		padding-left: 35px;
 		margin-bottom: 20px;
 		font-weight: 700;
-		color: #596275;
+		color: $deep-grey;
 		font-size: 0.8em;
 		padding-top: 2px;
 		cursor: pointer;
@@ -105,7 +105,7 @@
 			display: block;
 			width: 20px;
 			height: 20px;
-			border: 1px solid #f3a683;
+			border: 1px solid $coral-hover;
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -129,7 +129,7 @@
 	.priority-span,
 	.status-span {
 		label {
-			color: #596275;
+			color: $deep-grey;
 			font-size: 0.8em;
 			font-weight: 700;
 		}
@@ -137,13 +137,13 @@
 			margin-left: 5px;
 			padding: 0 5px;
 			font-weight: 700;
-			color: #596275;
+			color: $deep-grey;
 			font-size: 0.8em;
 			outline: none;
-			border: 1px solid #f3a683;
+			border: 1px solid $coral-hover;
 			&:focus {
 				outline: none;
-				border: 1px solid #f3a683;
+				border: 1px solid $coral-hover;
 			}
 		}
 	}

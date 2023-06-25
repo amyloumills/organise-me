@@ -23,7 +23,7 @@
 	</span>
 </div>
 
-<style>
+<style lang="scss">
 	.note-container {
 		display: flex;
 		flex-direction: column;
@@ -45,9 +45,9 @@
 	}
 	.completed-button {
 		padding-top: 5px;
-		color: #01a3a4;
+		color: $teal;
 		&:hover {
-			color: #00d2d3;
+			color: $teal-hover;
 		}
 	}
 	.pinned {

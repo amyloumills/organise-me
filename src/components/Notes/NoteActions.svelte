@@ -37,20 +37,20 @@
 		justify-content: flex-end;
 	}
 	button {
-		color: #ffffff;
+		color: $white;
 		padding: 5px 3px 2px 3px;
 		width: 40px;
 	}
 	.edit-button {
-		background-color: #f19066;
+		background-color: $coral;
 		&:hover {
-			background-color: #f3a683;
+			background-color: $coral-hover;
 		}
 	}
 	.delete-button {
 		background-color: $red;
 		&:hover {
-			background-color: #e77f67;
+			background-color: $red-hover;
 		}
 	}
 </style>
